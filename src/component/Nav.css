@@ -1,0 +1,72 @@
+.main-nav {
+    width: 100vw;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    box-shadow:
+        4.5px 0px 3.6px rgba(0, 0, 0, 0.024),
+        12.5px 0px 10px rgba(0, 0, 0, 0.035),
+        30.1px 0px 24.1px rgba(0, 0, 0, 0.046),
+        100px 0px 80px rgba(0, 0, 0, 0.07);
+    z-index: 1;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4px;
+}
+
+.main-nav li:not(.logo, .cta-el) {
+    margin: 0 8px;
+    font-size: 14px;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    max-height: 30px;
+    margin-right: 8px;
+}
+
+.logo h2{
+    font-size: 16px;
+}
+
+.main-nav li a {
+    color: inherit;
+    transition: all ease-in-out .3s;
+}
+
+.main-nav li a:not(.logo a):hover, .main-nav li a:not(.logo a).active {
+    color: #C83760;
+}
+
+@media (min-width:768px) {
+    .main-nav {
+        top: 0;
+        bottom: initial;
+        padding: 0 32px;
+    }
+
+    .main-nav .cta-el {
+        margin-left: auto;;
+    }
+
+    .main-nav .cta-el a {
+        text-decoration: none;
+        padding: 8px 24px;
+    }
+}

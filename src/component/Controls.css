@@ -1,0 +1,25 @@
+.controls .hidden {
+    display: none;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 8px;
+    width: 100vw;
+    z-index: 2;
+}
+
+.control {
+    --index: 1;
+    background: #9a9a9a;
+    width: calc((100vw / var(--index)) - 8px);
+    height: 4px;
+    border-radius: 20px;
+    transition: all ease-in-out .3s;
+}
+
+.control.is-active {
+    background: #C83760;
+}

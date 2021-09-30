@@ -1,0 +1,33 @@
+.about {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 96px;
+    position: relative;
+}
+
+.about h1 {
+    display: inline-block;
+    position: relative;
+}
+
+.about h1::after {
+    content: "";
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    top: 16px;
+    left: 4px;
+    background-color: rgba(200, 55, 96, .3);
+}
+
+.about p {
+    line-height: 1.4;
+}
+
+@media (min-width:1024px) {
+    .about {
+        padding-top: 64px;
+        min-height: calc(100vh - 32px);
+    }
+}

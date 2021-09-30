@@ -1,12 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import './normalize.css';
 import reportWebVitals from './reportWebVitals';
+
+import App from './App';
+import Nav from './component/Nav';
+import About from './component/About';
+import Projects from './component/Projects';
+
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import {isMobile, isTablet} from 'react-device-detect';
+import MobileProjects from './component/MobileProjects';
+
+const Root = () => (
+  <BrowserRouter>
+    <Nav />
+    <Switch>
+      <Route exact path='/' component={App}></Route>
+      <Route exact path='/projects' render={() => {
+
+        let result;
+
+        if (isTablet) {
+          result = <Projects />
+        } else if (isMobile) {
+          result =  <MobileProjects />
+        } 
+        return result || <Projects />;
+      }} />
+      <Route exact path='/about' component={About} />
+    </Switch>
+  </BrowserRouter>
+)
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Root />
   </React.StrictMode>,
   document.getElementById('root')
 );

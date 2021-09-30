@@ -1,0 +1,33 @@
+.tuto {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 2;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 90% 16px 0;
+}
+
+.tuto-separation {
+    position: absolute;
+    height: 100vh;
+    width: 1px;
+    border: .5px dashed #fff;
+    top: 0;
+    left: calc(100vw / 5 * 2);
+}
+
+.tuto p {
+    max-width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.tuto .swipe {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+}

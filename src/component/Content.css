@@ -1,0 +1,66 @@
+.story-content {
+    padding: 32px 16px 16px;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    position: relative;
+}
+
+.story-content h1 {
+    margin: 0;
+}
+
+.story-content ul {
+    list-style: disc;
+    padding-left: 32px;
+}
+
+.story-content .swipe-up {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.story-content .swipe-up svg {
+    margin-bottom: 4px;
+}
+
+.pop-up.hidden {
+    display: none;
+}
+
+.pop-up {
+    width: 90%;
+    background: #fcfcfc;
+    border-radius: 4px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    align-items: center;
+    z-index: 3;
+    position: absolute;
+    bottom: 9vh;
+    box-shadow: 
+        0.9px 0.8px 2.2px rgba(0, 0, 0, 0.02), 
+        2.2px 2px 5.3px rgba(0, 0, 0, 0.028), 
+        4.1px 3.8px 10px rgba(0, 0, 0, 0.035), 
+        7.4px 6.7px 17.9px rgba(0, 0, 0, 0.042), 
+        13.8px 12.5px 33.4px rgba(0, 0, 0, 0.05), 
+        33px 30px 80px rgba(0, 0, 0, 0.07);
+}
+
+.pop-up a {
+    margin: 4px 0;
+    transition: all ease-in-out .3s;
+}
+
+.pop-up a:hover {
+    color: red;
+}

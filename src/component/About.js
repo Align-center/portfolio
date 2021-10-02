@@ -24,7 +24,12 @@ function About() {
                     Si jamais mon profil vous interesse, n'hésitez pas à me contacter ou téléchargez mon cv pour avoir plus de détails sur mes expériences passées et mes compétences.
                 </p>
 
-                <button className="cta">Télécharger mon CV au format PDF</button>
+                <a
+                    href={require('../img/cv.pdf').default} 
+                    download
+                    className="cta">
+                    Télécharger mon CV au format PDF
+                </a>
             </main>
             <Footer />
         </Fragment>

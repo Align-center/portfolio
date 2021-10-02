@@ -25,6 +25,11 @@
     line-height: 1.4;
 }
 
+.about .cta {
+    width: fit-content;
+    text-decoration: none;
+}
+
 @media (min-width:1024px) {
     .about {
         padding-top: 64px;

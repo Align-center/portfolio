@@ -25,9 +25,9 @@ function Projects() {
         database.ref('/').on('value', snapshot => {
 
             if (snapshot.val()) {
-              setProjects(snapshot.val());
+                setProjects(snapshot.val());
             }
-          });
+        });
     }, []);
 
     const cards = Object.keys(projects).map(project => (

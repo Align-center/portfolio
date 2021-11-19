@@ -27,13 +27,13 @@ function App() {
   }, []);
 
   if (Object.keys(projects).length > 0) {
-    languages = projects['project-1'].languages.split(',');
+    languages = projects['project-9'].languages.split(',');
     card = (
       <article className='project' onClick={() => setGoToProjects(true)}>
   
-        <h3>{projects['project-1'].title}</h3>
+        <h3>{projects['project-9'].title}</h3>
 
-        <p>{projects['project-1'].content}</p>
+        <p>{projects['project-9'].content}</p>
 
         <ul>
             {languages.map(language => (
